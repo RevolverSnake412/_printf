@@ -3,7 +3,7 @@
 /**
  * _printf - Similar to printf standard function
 */
-void _printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 
 }
