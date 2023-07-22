@@ -1,21 +1,44 @@
-#include "theader.h"
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
+
 /**
- * main - This is going to be our test file
- * for this Project.
+ * main - Entry point
  *
- * Return: 0 if the code succeed.
-*/
+ * Return: Always 0
+ */
 int main(void)
 {
-	int integer = 69;
-	double decimal = 4.20;
-	char string[] = "Hello World!";
-	char character = 'c';
+    int len;
+    int len2;
+    unsigned int ui;
+    void *addr;
 
-	_printf("This is an integer: %d", integer);
-	_printf("These are decimals: %f", decimal); //4.20 should be outputed as 4.200000 (6 digits after dot)
-	_printf("This is a string: %s", string);
-	_printf("This is a character: %c", character); //if the data has more characters than one, print only the first
-						       //and ignore the rest
-	return (0); //If we made it!!
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
+    ui = (unsigned int)INT_MAX + 1024;
+    addr = (void *)0x7ffe637541f0;
+    _printf("Length:[%d, %i]\n", len, len);
+    printf("Length:[%d, %i]\n", len2, len2);
+    _printf("Negative:[%d]\n", -762534);
+    printf("Negative:[%d]\n", -762534);
+    _printf("Unsigned:[%u]\n", ui);
+    printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+    _printf("Address:[%p]\n", addr);
+    printf("Address:[%p]\n", addr);
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
+    _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
+    return (0);
 }
