@@ -1,5 +1,6 @@
 #include "main.h"
 #include "unistd.h"
+#include <stdlib.h>
 
 int count = 0;
 
@@ -27,12 +28,26 @@ int _printf_c(char content)
 int _printf_s(char *content)
 {
 	char *str = content;
-	int len = 0;
+	char *dynamic_str;
+	int len = 0, i;
 
 	while (str[len])
 		len++;
 
-	write(1, str, len);
+	dynamic_str = malloc(len + 1);
+
+	if (!dynamic_str)
+	{
+		return (-1);
+	}
+
+	for (i = 0; i <= len; i++)
+		dynamic_str[i] = str[i];
+
+	write(1, dynamic_str, len);
 	count += len;
+
+	free(dynamic_str);
+
 	return (0);
 }
