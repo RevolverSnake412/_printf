@@ -1,6 +1,9 @@
+# Printf
+
 **`_printf` function similar to the standard C function `printf`**
 
 TODO:
+
 1. We use `stdarg.h` for handling variadic arguments.
 
 2. Define `_printf` function, taking a format string and variadic arguments.
@@ -12,7 +15,7 @@ TODO:
 5. When encountering the % character, handle the format specifier that follows (%d, %s, %c, %i, %f) using `va_arg` to retrieve the corresponding argument from the list.
 
 6. Use the appropriate output functions `putchar` or `puts` to print the formatted output.
- 
+
 7. Continue iterating until reaching the end of the format string.
 
 8. Use `va_end` to clean up the argument list.
