@@ -1,6 +1,8 @@
 #include "main.h"
 #include "unistd.h"
 
+extern int count;
+
 /**
  * _putchar_c: For outputing single character.
  * @content: Provided by user.
@@ -12,6 +14,7 @@ int _printf_c(char content)
 	char c = content;
 
 	write(1, &c, 1);
+	count++;
 	return (0);
 }
 
@@ -30,5 +33,6 @@ int _printf_s(char *content)
 		len++;
 
 	write(1, str, len);
+	count += len;
 	return (0);
 }
