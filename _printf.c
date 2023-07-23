@@ -28,10 +28,6 @@ int _printf(const char *format, ...)
 			case 's':
 				counter += _printf_s(va_arg(args, char *));
 				break;
-			case 'd':
-			case 'i':
-				counter += _printf_d(va_arg(args, int));
-				break;
 			case '%':
 				write(1, "%", 1);
 				counter++;
