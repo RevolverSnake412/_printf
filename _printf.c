@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _printf - Similar to printf standard function.
@@ -46,4 +47,21 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (counter);
+}
+
+/**
+ * _printf_d - For outputting a decimal integer.
+ * @num: Decimal integer provided by the user.
+ *
+ * Return: Number of characters printed on success.
+ */
+int _printf_d(int num)
+{
+	char buffer[20];
+	int len;
+
+	len = snprintf(buffer, 20, "%d", num);
+	write(1, buffer, len);
+
+	return len;
 }
