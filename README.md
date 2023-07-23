@@ -14,7 +14,7 @@ TODO:
 
 5. When encountering the % character, handle the format specifier that follows (%d, %s, %c, %i, %f) using `va_arg` to retrieve the corresponding argument from the list.
 
-6. Use the appropriate output functions `putchar` or `puts` to print the formatted output.
+6. Use the appropriate output functions `write` to print the formatted output.
 
 7. Continue iterating until reaching the end of the format string.
 
