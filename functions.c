@@ -2,7 +2,7 @@
 #include "unistd.h"
 
 /**
- * _putchar_c - For outputting a single character.
+ * _printf_c - For outputting a single character.
  * @content: Provided by user.
  *
  * Return: 0 on success.
@@ -16,7 +16,7 @@ int _printf_c(char content)
 }
 
 /**
- * _putchar_s - For outputting a string.
+ * _printf_s - For outputting a string.
  * @content: Provided by user.
  *
  * Return: 0 on success.
