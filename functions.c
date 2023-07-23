@@ -26,9 +26,6 @@ int _printf_s(char *content)
 	char *str = content;
 	int len = 0;
 
-	if (str == NULL)
-		return (-1);
-
 	while (str[len])
 		len++;
 
