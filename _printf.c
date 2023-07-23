@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,6 +14,7 @@ int _printf(const char *format, ...)
 	int counter = 0;
 	const char *p = format;
 	va_list args;
+
 	va_start(args, format);
 	while (*p)
 	{
@@ -23,17 +25,14 @@ int _printf(const char *format, ...)
 			switch (*p)
 			{
 			case 'c':
-				counter += _printf_c((char)va_arg(args, int));
+				_printf_c((char)va_arg(args, int));
+				counter++;
 				break;
 			case 's':
 				counter += _printf_s(va_arg(args, char *));
 				break;
 			case '%':
 				write(1, "%", 1);
-				counter++;
-				break;
-			default:
-				write(1, p, 1);
 				counter++;
 				break;
 			}
@@ -46,5 +45,6 @@ int _printf(const char *format, ...)
 		p++;
 	}
 	va_end(args);
+	printf("\n%d", counter);
 	return (counter);
 }
