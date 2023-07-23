@@ -7,7 +7,7 @@
  * @buffer: char
  * @flags: int
  * @width: int
- * @precision:int 
+ * @precision:int
  * @size: int
  *
  * Return: printed_chars

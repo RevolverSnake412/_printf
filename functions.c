@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_char - print_char 
+ * print_char - print_char
  * @types: va_list
  * @buffer: char
  * @flags: int

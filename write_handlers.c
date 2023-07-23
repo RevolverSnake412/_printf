@@ -50,7 +50,7 @@ int handle_write_char(char c, char buffer[],
  * @buffer: char
  * @flags: int
  * @width: int
- * @precision: int 
+ * @precision: int
  * @size: int
  *
  * Return: chars size
@@ -142,7 +142,7 @@ int write_num(int ind, char buffer[],
  * @buffer: char
  * @flags: int
  * @width: int
- * @precision: int 
+ * @precision: int
  * @size: int
  *
  * Return: char size
