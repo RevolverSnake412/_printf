@@ -1,5 +1,5 @@
 #include "main.h"
-#include "unistd.h"
+#include <unistd.h>
 
 /**
  * _printf_c - For outputting a single character.
@@ -25,6 +25,9 @@ int _printf_s(char *content)
 {
 	char *str = content;
 	int len = 0;
+
+	if (str == NULL)
+		return (-1);
 
 	while (str[len])
 		len++;
