@@ -1,6 +1,9 @@
 #include "main.h"
 #include <unistd.h>
 
+int _printf_c(char content);
+int _printf_s(char *content);
+
 /**
  * _printf_c - For outputting a single character.
  * @content: Provided by user.
