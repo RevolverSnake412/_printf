@@ -45,7 +45,5 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 
-	if (va_arg(args, void *))
-        return (-1);
 	return (counter);
 }
