@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include "main.h"
 
-int count;
+int count = 0;
 
 /**
  * _printf: Similar to printf standard function
