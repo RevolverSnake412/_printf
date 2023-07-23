@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <stdarg.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -45,6 +44,5 @@ int _printf(const char *format, ...)
 		p++;
 	}
 	va_end(args);
-	printf("\n%d", counter);
 	return (counter);
 }
