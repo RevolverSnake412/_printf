@@ -1,36 +1,38 @@
 #include "main.h"
 #include "unistd.h"
 
+int count = 0;
+
 /**
- * print_char - For outputting a single character.
- * @content: Provided by the user.
+ * _putchar_c: For outputing single character.
+ * @content: Provided by user.
  *
- * Return: 1 on success
+ * Return: 0 on success
  */
-int print_char(char content)
+int _printf_c(char content)
 {
 	char c = content;
 
 	write(1, &c, 1);
-	return (1);
+	count++;
+	return (0);
 }
 
 /**
- * print_string - For outputting a string.
- * @content: Provided by the user.
+ * _putchar_s: For outputing a string.
+ * @content: Provided by user.
  *
- * Return: the length of the string printed
+ * Return: 0 on success
  */
-int print_string(char *content)
+int _printf_s(char *content)
 {
-	if (content == NULL)
-		return (write(1, "(null)", 6));
-
+	char *str = content;
 	int len = 0;
 
-	while (content[len])
+	while (str[len])
 		len++;
 
-	write(1, content, len);
-	return (len);
+	write(1, str, len);
+	count += len;
+	return (0);
 }

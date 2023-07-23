@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _printf - Similar to printf standard function
+ * _printf: Similar to printf standard function
  *
  * @format: The type the user will choose.
  *
@@ -24,10 +24,10 @@ int _printf(const char *format, ...)
 			switch (*p)
 			{
 			case 'c':
-				counter += print_char((char)va_arg(args, int));
+				counter += _printf_c((char)va_arg(args, int));
 				break;
 			case 's':
-				counter += print_string(va_arg(args, char *));
+				counter += _printf_s(va_arg(args, char *));
 				break;
 			case '%':
 				write(1, "%", 1);
