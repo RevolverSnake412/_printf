@@ -1,6 +1,5 @@
 #include "main.h"
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * _printf_c - For outputting a single character.
@@ -33,21 +32,4 @@ int _printf_s(char *content)
 	write(1, str, len);
 
 	return (len);
-}
-
-/**
- * _printf_d - For outputting a decimal integer.
- * @num: Decimal integer provided by user.
- *
- * Return: Number of characters printed on success.
- */
-int _printf_d(int num)
-{
-	char buffer[20];
-	int len;
-
-	len = snprintf(buffer, 20, "%d", num);
-	write(1, buffer, len);
-
-	return len;
 }
