@@ -1,5 +1,3 @@
-#include <unistd.h>
-#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -24,14 +22,17 @@ int _printf(const char *format, ...)
 			switch (*p)
 			{
 			case 'c':
-				_printf_c((char)va_arg(args, int));
-				counter++;
+				counter += _printf_c((char)va_arg(args, int));
 				break;
 			case 's':
 				counter += _printf_s(va_arg(args, char *));
 				break;
 			case '%':
 				write(1, "%", 1);
+				counter++;
+				break;
+			default:
+				write(1, p, 1);
 				counter++;
 				break;
 			}

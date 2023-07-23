@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * _printf_c - For outputting a single character.
@@ -19,7 +18,7 @@ int _printf_c(char content)
  * _printf_s - For outputting a string.
  * @content: Provided by user.
  *
- * Return: 0 on success.
+ * Return: The number of characters printed.
  */
 int _printf_s(char *content)
 {
