@@ -3,11 +3,10 @@
 #include "main.h"
 
 /**
- * _printf: Similar to printf standard function
- *
+ * _printf - Similar to printf standard function.
  * @format: The type the user will choose.
  *
- * Return: the number of characters printed
+ * Return: The number of characters printed.
  */
 int _printf(const char *format, ...)
 {

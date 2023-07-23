@@ -4,10 +4,10 @@
 int count = 0;
 
 /**
- * _putchar_c: For outputing single character.
+ * _putchar_c - For outputting a single character.
  * @content: Provided by user.
  *
- * Return: 0 on success
+ * Return: 0 on success.
  */
 int _printf_c(char content)
 {
@@ -19,10 +19,10 @@ int _printf_c(char content)
 }
 
 /**
- * _putchar_s: For outputing a string.
+ * _putchar_s - For outputting a string.
  * @content: Provided by user.
  *
- * Return: 0 on success
+ * Return: 0 on success.
  */
 int _printf_s(char *content)
 {
