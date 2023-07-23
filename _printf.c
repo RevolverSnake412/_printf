@@ -34,6 +34,10 @@ int _printf(const char *format, ...)
 				write(1, "%", 1);
 				counter++;
 				break;
+			case 'd':
+			case 'i':
+				counter += _printf_d(va_arg(args, int));
+				break;
 			}
 		}
 		else
