@@ -1,14 +1,14 @@
 #include "main.h"
 #include "unistd.h"
 
-extern int count;
+int count = 0;
 
 /**
  * _putchar_c: For outputing single character.
  * @content: Provided by user.
  *
  * Return: 0 on success
-*/
+ */
 int _printf_c(char content)
 {
 	char c = content;
@@ -23,7 +23,7 @@ int _printf_c(char content)
  * @content: Provided by user.
  *
  * Return: 0 on success
-*/
+ */
 int _printf_s(char *content)
 {
 	char *str = content;
